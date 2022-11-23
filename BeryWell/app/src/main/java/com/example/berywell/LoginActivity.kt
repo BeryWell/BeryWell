@@ -15,6 +15,6 @@ class LoginActivity : AppCompatActivity() {
         val toolbar : Toolbar = binding.loginTb
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        
+
     }
 }

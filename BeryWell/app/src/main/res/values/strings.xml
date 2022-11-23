@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BeryWell</string>
+    <string name="login_title_tx">타인의\n삶을\n살아보자</string>
+    <string name="login_hint_tx">아이디 또는 이메일을 입력해주세요.</string>
+    <string name="login_pw_tx">비밀번호를 입력해주세요.</string>
+    <string name="login_auto_tx">자동 로그인</string>
+    <string name="login_fin_tx">로그인</string>
 </resources>

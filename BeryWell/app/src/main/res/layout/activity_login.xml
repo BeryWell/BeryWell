@@ -9,10 +9,138 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/login_tb"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.072"
         app:title="로그인"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_context_cl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_tb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/login_title_tx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.154"
+            app:layout_constraintWidth_percent="0.239"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/login_title_tx"
+            android:fontFamily="@font/gmbold"
+            android:autoSizeStepGranularity="1dp"
+            android:autoSizeMaxTextSize="22dp"
+            android:autoSizeMinTextSize="1dp"
+            android:autoSizeTextType="uniform"
+            android:textColor="#222222"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="11sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="58dp"
+            android:layout_marginStart="24dp"/>
+
+        <EditText
+            android:id="@+id/login_id_et"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f1f1f5"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="12dp"
+            android:textSize="14dp"
+            android:layout_marginTop="31dp"
+            android:textColor="#999999"
+            android:letterSpacing="-0.02"
+            android:fontFamily="@font/gmr"
+            android:lineSpacingExtra="16sp"
+            android:hint="@string/login_hint_tx"
+            app:layout_constraintWidth_percent="0.866"
+            app:layout_constraintHeight_percent="0.081"
+            app:layout_constraintTop_toBottomOf="@+id/login_title_tx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/login_pw_et"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f1f1f5"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="12dp"
+            android:textSize="14dp"
+            android:textColor="#999999"
+            android:letterSpacing="-0.02"
+            android:fontFamily="@font/gmr"
+            android:lineSpacingExtra="16sp"
+            android:hint="@string/login_pw_tx"
+            android:layout_marginTop="12dp"
+            app:layout_constraintWidth_percent="0.866"
+            app:layout_constraintHeight_percent="0.081"
+            app:layout_constraintTop_toBottomOf="@+id/login_id_et"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <CheckBox
+            android:id="@+id/login_auto_tb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.077"
+            app:layout_constraintHeight_percent="0.044"
+            android:layout_marginTop="17dp"
+            app:layout_constraintTop_toBottomOf="@+id/login_pw_et"
+            app:layout_constraintStart_toStartOf="@+id/login_pw_et"/>
+
+        <TextView
+            android:id="@+id/login_auto_tx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.183"
+            app:layout_constraintHeight_percent="0.031"
+            android:text="@string/login_auto_tx"
+            android:fontFamily="@font/gmr"
+            app:layout_constraintStart_toEndOf="@+id/login_auto_tb"
+            app:layout_constraintTop_toTopOf="@id/login_auto_tb"
+            app:layout_constraintBottom_toBottomOf="@id/login_auto_tb"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="1dp"
+            android:autoSizeMaxTextSize="14dp"
+            android:autoSizeStepGranularity="1dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#191919"
+            android:letterSpacing="-0.02"
+            android:layout_marginStart="6dp"
+            android:lineSpacingExtra="16sp"/>
+
+        <Button
+            android:id="@+id/login_fin_bt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/login_fin_tx"
+            app:layout_constraintWidth_percent="0.866"
+            app:layout_constraintHeight_percent="0.081"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autoSizeStepGranularity="1dp"
+            android:autoSizeMaxTextSize="18dp"
+            android:autoSizeMinTextSize="1dp"
+            android:autoSizeTextType="uniform"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/gmbold"
+            android:background="#6524ff"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="12sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="135dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
