@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BeryWell"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".SearchLikeActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -25,10 +25,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

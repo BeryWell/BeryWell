@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchLikeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_like_tb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/gmr"
+            android:lineSpacingExtra="8sp"
+            android:text="LIFE"
+            android:textColor="#222222"
+            android:textSize="22dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_context_cl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_like_tb">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_user_profile_ol_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="21dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_profile_outline_drawable"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.334">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/my_user_profile_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginVertical="1dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/community_owner_temp_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/search_user_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="13dp"
+            android:autoSizeMaxTextSize="22dp"
+            android:autoSizeMinTextSize="1dp"
+            android:autoSizeStepGranularity="1dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/gmbold"
+            android:gravity="center_horizontal|center_vertical"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="8sp"
+            android:text="예지"
+            android:textColor="#191919"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_user_profile_ol_cl"
+            app:layout_constraintWidth_percent="0.166" />
+
+        <TextView
+            android:id="@+id/search_user_info_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:autoSizeMaxTextSize="12dp"
+            android:autoSizeMinTextSize="1dp"
+            android:autoSizeStepGranularity="1dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_horizontal|center_vertical"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="18sp"
+            android:text="연예인"
+            android:textColor="#191919"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.027"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_user_name_tv"
+            app:layout_constraintWidth_percent="0.166" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_info_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/search_info_drawable"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_user_info_tv"
+            app:layout_constraintWidth_percent="0.866">
+
+            <TextView
+                android:id="@+id/user_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gmlight"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="18sp"
+                android:scrollbars="vertical"
+                android:text="@string/user_info_tx"
+                android:textColor="#191919"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_schedule_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/user_schedule_background_drawable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_info_cl"
+            app:layout_constraintWidth_percent="0.866">
+
+            <TextView
+                android:id="@+id/user_schedule_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:autoSizeMaxTextSize="18dp"
+                android:autoSizeMinTextSize="1dp"
+                android:autoSizeStepGranularity="1dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/gmr"
+                android:gravity="center_horizontal|center_vertical"
+                android:lineSpacingExtra="12sp"
+                android:text="아침운동"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.448"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.257" />
+
+            <TextView
+                android:id="@+id/user_schedule_time_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:autoSizeMaxTextSize="18dp"
+                android:autoSizeMinTextSize="1dp"
+                android:autoSizeStepGranularity="1dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/gmr"
+                android:gravity="center_horizontal|center_vertical"
+                android:lineSpacingExtra="12sp"
+                android:text="08:00 ~ 10:00"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.448"
+                app:layout_constraintStart_toEndOf="@+id/user_schedule_title_tv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.449" />
+
+            <CheckBox
+                android:id="@+id/user_schedule_alarm_cb"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/user_schedule_alarm_drawable"
+                android:button="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.483"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.09" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
