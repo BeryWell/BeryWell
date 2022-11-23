@@ -19,5 +19,9 @@ class SearchLikeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         binding.userInfoTv.movementMethod = ScrollingMovementMethod.getInstance()
+
+        binding.userFavorTb.setOnClickListener{
+            it.isSelected = !it.isSelected
+        }
     }
 }
