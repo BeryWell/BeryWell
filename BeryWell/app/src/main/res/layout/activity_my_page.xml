@@ -25,7 +25,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/mypage_image"
+            android:id="@+id/mypage_iv"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent="0.334"
             android:layout_height="0dp"
@@ -40,6 +40,177 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+        <TextView
+            android:id="@+id/mypage_name_tv"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.166"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.05"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="150dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/gmbold"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:autoSizeMinTextSize="1sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeStepGranularity="1sp"
+            android:text="서산"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/mypage_subname_tv"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.166"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.028"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="150dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/gmr"
+            android:textColor="@color/black"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="1sp"
+            android:text="대학생"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_name_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mypage_content_cl"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.866"
+            android:layout_height="0dp"
+            android:background="@drawable/mypage_backgroud_drawable"
+            app:layout_constraintHeight_percent="0.654"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <TextView
+                android:id="@+id/mypage_like_tv"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.128"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.12"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="25dp"
+                android:text="20"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="30sp"
+                android:fontFamily="@font/gmbold"
+                android:autoSizeStepGranularity="1sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#191919"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="0sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/mypage_like_fix_tv"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.128"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.065"
+                android:fontFamily="@font/gmr"
+                android:textStyle="bold"
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:textColor="#191919"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="14sp"
+                android:text="Like"
+                android:gravity="center_vertical|center_horizontal"
+                app:layout_constraintStart_toStartOf="@+id/mypage_like_tv"
+                app:layout_constraintEnd_toEndOf="@+id/mypage_like_tv"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_like_tv"/>
+
+            <TextView
+                android:id="@+id/mypage_follower_tv"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.128"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.12"
+                android:layout_marginEnd="88dp"
+                android:text="20"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="30sp"
+                android:fontFamily="@font/gmbold"
+                android:autoSizeStepGranularity="1sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#191919"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="0sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mypage_like_tv"/>
+
+            <TextView
+                android:id="@+id/mypage_follower_fix_tv"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.212"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.065"
+                android:fontFamily="@font/gmr"
+                android:textStyle="bold"
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:textColor="#191919"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="14sp"
+                android:text="Follower"
+                android:gravity="center_vertical|center_horizontal"
+                app:layout_constraintStart_toStartOf="@+id/mypage_follower_tv"
+                app:layout_constraintEnd_toEndOf="@+id/mypage_follower_tv"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_follower_tv"/>
+
+            <View
+                android:id="@+id/mypage_border_v"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_marginTop="12dp"
+                android:layout_height="1dp"
+                android:background="#73000000"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_follower_fix_tv"/>
+
+            <TextView
+                android:id="@+id/mypage_user_info_tv"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.8"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:autoSizeMaxTextSize="12sp"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeStepGranularity="1sp"
+                android:fontFamily="@font/gmlight"
+                android:text=""
+                android:textColor="#191919"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="18sp"
+                android:scrollbars="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_border_v"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
