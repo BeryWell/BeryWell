@@ -2,6 +2,7 @@ package com.example.berywell
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.widget.Toolbar
 import com.example.berywell.databinding.ActivityMyPageBinding
 
@@ -15,7 +16,7 @@ class MyPageActivity : AppCompatActivity() {
         val toolbar : Toolbar = binding.mypageTb
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        binding.mypageUserInfoTv.movementMethod
+        
+        binding.mypageUserInfoTv.movementMethod = ScrollingMovementMethod.getInstance()
     }
 }
