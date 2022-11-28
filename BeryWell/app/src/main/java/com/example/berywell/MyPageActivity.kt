@@ -16,7 +16,7 @@ class MyPageActivity : AppCompatActivity() {
         val toolbar : Toolbar = binding.mypageTb
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        
+
         binding.mypageUserInfoTv.movementMethod = ScrollingMovementMethod.getInstance()
     }
 }
