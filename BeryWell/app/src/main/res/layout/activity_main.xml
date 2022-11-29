@@ -14,44 +14,47 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="24dp"
-            android:paddingBottom="50dp"
-            >
+            android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/main_top_logo_cl"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_tb"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.072"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/main_top_logo_tv"
+                    android:id="@+id/toolbar_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="14dp"
-                    android:fontFamily="@font/gmbold"
-                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/gmr"
+                    android:lineSpacingExtra="8sp"
                     android:text="LIFE"
-                    android:textColor="@color/black"
-                    android:textSize="22dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:textColor="#222222"
+                    android:textSize="22dp"/>
 
-                <ImageButton
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="5dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_outline_search_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_gravity="end"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:queryHint="검색어를 입력하세요."
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_banner_cl"
@@ -60,7 +63,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.27"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/main_top_logo_cl">
+                app:layout_constraintTop_toBottomOf="@id/main_tb">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
@@ -82,6 +85,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,6 +93,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="18dp"
+                android:paddingStart="24dp"
+                android:paddingRight="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.08"
                 app:layout_constraintStart_toStartOf="parent"
@@ -108,21 +114,21 @@
 
                     <ImageView
                         android:id="@+id/main_btns_my_iv"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent="0.546"
+                        android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_baseline_person_add_24"
+                        android:src="@drawable/add_friend"
                         app:layout_constraintBottom_toTopOf="@+id/main_btns_my_tv"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/main_btns_my_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/gmbold"
+                        android:fontFamily="@font/gmr"
                         android:gravity="center_horizontal|bottom"
                         android:includeFontPadding="false"
                         android:text="MY"
@@ -149,21 +155,21 @@
 
                     <ImageView
                         android:id="@+id/main_good_iv"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent="0.546"
+                        android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_baseline_star_24"
+                        android:src="@drawable/star"
                         app:layout_constraintBottom_toTopOf="@+id/main_good_tv"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/main_good_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/gmbold"
+                        android:fontFamily="@font/gmr"
                         android:gravity="center_horizontal|bottom"
                         android:includeFontPadding="false"
                         android:text="GOOD"
@@ -190,21 +196,21 @@
 
                     <ImageView
                         android:id="@+id/main_alarm_iv"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent="0.546"
+                        android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_baseline_access_alarm_24"
+                        android:src="@drawable/bell"
                         app:layout_constraintBottom_toTopOf="@+id/main_alarm_tv"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/main_alarm_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/gmbold"
+                        android:fontFamily="@font/gmr"
                         android:gravity="center_horizontal|bottom"
                         android:includeFontPadding="false"
                         android:text="ALARM"
@@ -214,7 +220,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/main_alarm_iv" />
+                        app:layout_constraintTop_toBottomOf="@+id/main_alarm_iv"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -231,21 +237,21 @@
 
                     <ImageView
                         android:id="@+id/main_edit_iv"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent="0.546"
+                        android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/ic_outline_edit_calendar_24"
+                        android:src="@drawable/schedule"
                         app:layout_constraintBottom_toTopOf="@+id/main_edit_tv"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/main_edit_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/gmbold"
+                        android:fontFamily="@font/gmr"
                         android:gravity="center_horizontal|bottom"
                         android:includeFontPadding="false"
                         android:text="EDIT"
@@ -255,7 +261,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/main_edit_iv" />
+                        app:layout_constraintTop_toBottomOf="@+id/main_edit_iv"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -265,31 +271,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="50dp"
+                android:paddingStart="24dp"
+                app:layout_constraintDimensionRatio="1:0.53"
                 app:layout_constraintTop_toBottomOf="@id/main_btns_cl"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.22">
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <TextView
                     android:id="@+id/main_rm_schdule_first_title_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="추천 스케쥴"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.33"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.134"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:textColor="#222222"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="12sp"
                     android:fontFamily="@font/gmbold"
+                    android:text="추천 스케쥴"
+                    android:gravity="center_vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/main_rm_schdule_first_add_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/gmbold"
+                    android:fontFamily="@font/gmr"
                     android:text="더보기"
                     android:textColor="#999999"
                     android:textSize="12dp"
+                    android:layout_marginEnd="24dp"
                     app:layout_constraintBottom_toBottomOf="@+id/main_rm_schdule_first_title_tv"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -304,41 +319,48 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/main_rm_schdule_first_title_tv" />
-
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_rm_schedule_second_cl"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
+                android:paddingStart="24dp"
+                app:layout_constraintDimensionRatio="1:0.51"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.22"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/main_rm_schedule_first_cl">
 
                 <TextView
                     android:id="@+id/main_rm_schdule_second_title_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.33"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.134"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:textColor="#222222"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="12sp"
                     android:fontFamily="@font/gmbold"
                     android:text="추천 스케쥴"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/main_rm_schdule_second_add_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/gmbold"
+                    android:fontFamily="@font/gmr"
                     android:text="더보기"
                     android:textColor="#999999"
                     android:textSize="12dp"
+                    android:layout_marginEnd="24dp"
                     app:layout_constraintBottom_toBottomOf="@+id/main_rm_schdule_second_title_tv"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
