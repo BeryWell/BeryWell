@@ -237,7 +237,7 @@
                 app:layout_constraintHeight_percent="0.1"
                 android:background="@drawable/mypage_background_btn_drawable"
                 android:text="@string/mypage_logout_tx"
-                android:fontFamily="@font/gmbold"
+                android:fontFamily="@font/gmr"
                 android:autoSizeStepGranularity="1sp"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMinTextSize="1sp"
