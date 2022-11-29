@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mypage_logout">#6524FF</color>
     <color name="mypage_black">#222222</color>
+    <color name="background_grey">#f1f1f5</color>
+    <color name="stroke_grey">#707070</color>
 </resources>
