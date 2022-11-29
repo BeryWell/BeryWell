@@ -199,7 +199,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textSize="12sp"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/gmlight"
                 android:text="@string/mypage_trash_tx"
                 android:textColor="#191919"
@@ -207,6 +207,27 @@
                 android:lineSpacingExtra="18sp"
                 android:scrollbars="vertical"
                 app:layout_constraintTop_toBottomOf="@+id/mypage_border_v"/>
+
+            <Button
+                android:id="@+id/mypage_fin_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                android:background="@drawable/mypage_background_btn_drawable"
+                android:text="@string/mypage_logout_tx"
+                android:fontFamily="@font/gmbold"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeMaxTextSize="18sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="12sp"
+                android:layout_marginBottom="48dp"
+                android:gravity="center_horizontal|center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
