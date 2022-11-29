@@ -132,7 +132,7 @@
             android:autoSizeMinTextSize="1dp"
             android:autoSizeTextType="uniform"
             android:textColor="#ffffff"
-            android:fontFamily="@font/gmbold"
+            android:fontFamily="@font/gmr"
             android:background="@drawable/user_schedule_background_drawable"
             android:letterSpacing="-0.03"
             android:lineSpacingExtra="12sp"
