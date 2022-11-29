@@ -105,7 +105,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
 
-
             <TextView
                 android:id="@+id/mypage_like_tv"
                 android:layout_width="0dp"
@@ -201,29 +200,41 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mypage_follower_fix_tv"/>
 
-            <TextView
-                android:id="@+id/mypage_user_info_tv"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mypage_user_info_cl"
                 android:layout_width="0dp"
                 app:layout_constraintWidth_percent="0.8"
                 android:layout_height="0dp"
-                app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="12sp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/gmlight"
-                android:text="@string/mypage_trash_tx"
-                android:textColor="#191919"
-                android:letterSpacing="-0.02"
-                android:lineSpacingExtra="18sp"
-                android:scrollbars="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_border_v"/>
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_border_v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/mypage_user_info_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/gmlight"
+                    android:scrollbars="vertical"
+                    android:text="@string/user_info_tx"
+                    android:textColor="#191919"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <Button
                 android:id="@+id/mypage_fin_btn"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintHeight_percent="0.1"
                 android:background="@drawable/mypage_background_btn_drawable"
                 android:text="@string/mypage_logout_tx"
                 android:fontFamily="@font/gmbold"

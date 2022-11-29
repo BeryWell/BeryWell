@@ -10,7 +10,7 @@ class MyScheduleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMyScheduleBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_schedule)
+        setContentView(binding.root)
 
         val toolbar : Toolbar = binding.myScheduleTb
         setSupportActionBar(toolbar)

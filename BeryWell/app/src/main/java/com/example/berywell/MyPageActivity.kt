@@ -11,7 +11,7 @@ class MyPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMyPageBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_page)
+        setContentView(binding.root)
 
         val toolbar : Toolbar = binding.mypageTb
         setSupportActionBar(toolbar)
