@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berywell.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,19 +22,17 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        binding.recomeendSelebScheduleRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
 
+        val celebScheduleEventRecyclerViewAdapter = CelebScheduleRecyclerViewAdapter()
+        binding.recomeendSelebScheduleRv.adapter = celebScheduleEventRecyclerViewAdapter
+
+        var list : MutableList<CelebScheduleEvent> = mutableListOf<CelebScheduleEvent>()
+        list.add(CelebScheduleEvent("손석희", "JTBC 뉴스룸 메인 앵커"))
+        list.add(CelebScheduleEvent("김동현", "전 종합격투기 선수"))
+        list.add(CelebScheduleEvent("김영한", "우아한형제들 기술자"))
+        list.add(CelebScheduleEvent("서 산", "제주도 최고 OUTPUT"))
+
+        celebScheduleEventRecyclerViewAdapter.submitSelebScheduleEventList(list)
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu, menu)
-//
-//        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-//        (menu!!.findItem(R.id.main_search_it).actionView as SearchView).apply {
-//            setSearchableInfo(searchManager.getSearchableInfo(componentName))
-//        }
-//
-//        return true
-//    }
-
-
 }
