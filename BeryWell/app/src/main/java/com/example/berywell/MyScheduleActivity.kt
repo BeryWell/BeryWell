@@ -17,5 +17,16 @@ class MyScheduleActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+        val myScheduleEventRecyclerViewAdapter = MyScheduleRecyclerViewAdapter()
+        binding.myScheduleRv.adapter = myScheduleEventRecyclerViewAdapter
+
+        var list : MutableList<MyScheduleEvent> = mutableListOf<MyScheduleEvent>()
+        list.add(MyScheduleEvent("아침 식사", "08:00 ~ 09:00"))
+        list.add(MyScheduleEvent("아침 운동", "09:00 ~ 11:00"))
+        list.add(MyScheduleEvent("미팅", "11:30 ~ 13:00"))
+        list.add(MyScheduleEvent("낮잠", "14:00 ~ 16:00"))
+
+        myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
+
     }
 }
