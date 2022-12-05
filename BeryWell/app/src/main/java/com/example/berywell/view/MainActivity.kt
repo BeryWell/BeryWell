@@ -1,11 +1,7 @@
-package com.example.berywell
+package com.example.berywell.view
 
-import android.app.SearchManager
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berywell.databinding.ActivityMainBinding

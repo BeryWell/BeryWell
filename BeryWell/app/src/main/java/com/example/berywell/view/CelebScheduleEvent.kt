@@ -1,4 +1,4 @@
-package com.example.berywell
+package com.example.berywell.view
 
 data class CelebScheduleEvent(
     var name:String = "",

@@ -1,4 +1,4 @@
-package com.example.berywell
+package com.example.berywell.view
 
 import android.app.TimePickerDialog
 import android.content.Context

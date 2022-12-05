@@ -1,11 +1,11 @@
-package com.example.berywell
+package com.example.berywell.view
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.berywell.R
 
 class SearchLikeRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

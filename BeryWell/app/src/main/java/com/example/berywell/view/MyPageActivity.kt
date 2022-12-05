@@ -1,4 +1,4 @@
-package com.example.berywell
+package com.example.berywell.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

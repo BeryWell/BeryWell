@@ -1,7 +1,8 @@
-package com.example.berywell
+package com.example.berywell.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.berywell.R
 
 class MyScheduleItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

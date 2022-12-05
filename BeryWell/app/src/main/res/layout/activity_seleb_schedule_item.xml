@@ -5,7 +5,7 @@
     android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:layout_marginRight="20dp"
-    tools:context=".SelebScheduleItemActivity">
+    tools:context=".view.SelebScheduleItemActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

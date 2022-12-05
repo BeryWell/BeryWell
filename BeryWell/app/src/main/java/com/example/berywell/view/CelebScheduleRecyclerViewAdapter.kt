@@ -1,10 +1,11 @@
-package com.example.berywell
+package com.example.berywell.view
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.berywell.R
 
 class CelebScheduleRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var searLikeList: List<CelebScheduleEvent>? = null
