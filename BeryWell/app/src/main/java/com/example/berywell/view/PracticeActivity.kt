@@ -19,7 +19,6 @@ class PracticeActivity : AppCompatActivity() {
         binding.btn.setOnClickListener{
             Log.d("lhj", "onCreate: ")
             showStartTimePicker(this)
-
         }
     }
 
