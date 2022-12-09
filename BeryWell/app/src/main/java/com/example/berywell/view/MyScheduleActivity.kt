@@ -34,7 +34,6 @@ class MyScheduleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMyScheduleBinding
     val viewModel: ScheduleViewModel by viewModels()
     var timeStr: String = ""
-    var scheduleList: ArrayList<DetailScheduleResponse> = ArrayList<DetailScheduleResponse>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMyScheduleBinding.inflate(layoutInflater)
@@ -48,56 +47,53 @@ class MyScheduleActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-//        var myScheduleEventRecyclerViewAdapter = MyScheduleRecyclerViewAdapter()
-//        binding.myScheduleRv.adapter = myScheduleEventRecyclerViewAdapter
+        var myScheduleEventRecyclerViewAdapter = MyScheduleRecyclerViewAdapter()
+        binding.myScheduleRv.adapter = myScheduleEventRecyclerViewAdapter
 
-        var list = mutableListOf<MyScheduleEvent>()
+        var list: MutableList<MyScheduleEvent> = mutableListOf<MyScheduleEvent>()
 
+        if (intent.getStringExtra("timeStr") != null) {
+            timeStr = intent.getStringExtra("timeStr")!!
+        }
 
-        timeStr = intent.getStringExtra("timeStr")!!
-        Log.d("TAG", "onCreate: $timeStr ")
+        binding.myScheduleIv.setOnClickListener {
+            val intent = Intent(this, ScheduleAddActivity::class.java)
+            startActivity(intent)
+        }
+
+        viewModel.userDetailSchedule.observe(this, Observer {
+            if (it != null) {
+                for (element in it) {
+                    list.add(
+                        MyScheduleEvent(
+                            element.content,
+                            "${it[0].startTime} ~ ${it[0].endTime}"
+                        )
+                    )
+                }
+                myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
+            }
+        })
+
         viewModel.getDetailScheduleList(
             detailScheduleRequest = DetailScheduleRequest(
                 timeStr,
                 "lhj"
             ), ::showToast
         )
-//        if(viewModel.userDetailSchedule.value!!.isNotEmpty()){
-//            for (i in 0 until viewModel.userDetailSchedule!!.value!!.size) {
-//                list.add(MyScheduleEvent(viewModel.userDetailSchedule!!.value!![i].content, "123"))
-//                myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
-//            }
-//        }else{
-//            Log.d("TAG", "onCreate:${viewModel.userDetailSchedule.value!![0]} ")
-//        }
 
-        /*  var array: List<DetailScheduleResponse>? =
-          for(i in 0 until array!!.size){
-              list.add(MyScheduleEvent(array[i].content,"123") )
-          }
-          */
-/*
-        myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(viewModel.userDetailSchedule.value.)
 
-        viewModel.userDetailSchedule.observe(this, Observer {
-*/
-/*
-        })*/
 
-/*
-                for (i in 0 until scheduleList.size) {
-                    list.add(
-                        MyScheduleEvent(
-                            scheduleList[i].content,
-                            "${scheduleList[i].startTime} ~ ${scheduleList[i].endTime}"
+        if (list.size != null) {
+            myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
+        }
 
-                        )
-                    )
-                    myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
-                }
-                myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
-*/
+
+        Log.d("lhj", "After timeStr : $timeStr")
+
+
     }
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         val imm: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -108,6 +104,5 @@ class MyScheduleActivity : AppCompatActivity() {
     private fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
-
 
 }

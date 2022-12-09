@@ -77,6 +77,7 @@ class ScheduleAddActivity : AppCompatActivity() {
 
             val intent = Intent(this@ScheduleAddActivity, MyScheduleActivity::class.java)
             intent.putExtra("timeStr", timeStr)
+            Log.d("lhj", "Before timeStr : $timeStr")
             startActivity(intent)
         }
 

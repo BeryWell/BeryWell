@@ -23,7 +23,10 @@ class MyScheduleRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     override fun getItemCount(): Int {
-        return myScheduleEvent!!.size
+        return if(myScheduleEvent!!.isEmpty())
+            0
+        else
+            myScheduleEvent!!.size
     }
 
     fun submitMyScheduleEventList(list: List<MyScheduleEvent>) {
