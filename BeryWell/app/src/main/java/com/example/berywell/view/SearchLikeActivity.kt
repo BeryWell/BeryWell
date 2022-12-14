@@ -1,9 +1,11 @@
 package com.example.berywell.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
@@ -42,22 +44,23 @@ class SearchLikeActivity : AppCompatActivity() {
         binding.searchLikeRv.adapter = searchLikeEventRecyclerViewAdapter
 
         var list: MutableList<SearchLikeEvent> = mutableListOf<SearchLikeEvent>()
-        list.add(SearchLikeEvent("아침 식사", "08:00 ~ 09:00"))
-        list.add(SearchLikeEvent("아침 운동", "09:00 ~ 11:00"))
+        list.add(SearchLikeEvent("수면", "21:00 ~ 06:00"))
+        list.add(SearchLikeEvent("조깅과 헬스 운동", "06:15 ~ 08:00"))
+        list.add(SearchLikeEvent("아침 식사", "08:00 ~ 09:30"))
+        list.add(SearchLikeEvent("패션 미팅", "12:00 ~ 14:00"))
+        list.add(SearchLikeEvent("가족 미팅", "14:00 ~ 17:00"))
 
         searchLikeEventRecyclerViewAdapter.submitSearchLikeEventList(list)
-
-
-        binding.btn.setOnClickListener {
-            viewModel.getAllScheduleList(::showToast)
-        }
-
-        viewModel.allSchedule.observe(this, Observer {
-            Log.d("lhj", "Activity : ${it[0].title}")
-        })
     }
 
     private fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this@SearchLikeActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 }

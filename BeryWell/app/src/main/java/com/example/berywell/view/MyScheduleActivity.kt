@@ -63,11 +63,11 @@ class MyScheduleActivity : AppCompatActivity() {
 
         viewModel.userDetailSchedule.observe(this, Observer {
             if (it != null) {
-                for (element in it) {
+                for (i in 0 until it.size) {
                     list.add(
                         MyScheduleEvent(
-                            element.content,
-                            "${it[0].startTime} ~ ${it[0].endTime}"
+                            it[i].content,
+                            "${it[i].startTime} ~ ${it[i].endTime}"
                         )
                     )
                 }
@@ -82,12 +82,19 @@ class MyScheduleActivity : AppCompatActivity() {
             ), ::showToast
         )
 
+        binding.toolbarTitle.setOnClickListener {
+            viewModel.getDetailScheduleList(
+                detailScheduleRequest = DetailScheduleRequest(
+                    timeStr,
+                    "lhj"
+                ), ::showToast
+            )
+        }
 
 
         if (list.size != null) {
             myScheduleEventRecyclerViewAdapter.submitMyScheduleEventList(list)
         }
-
 
         Log.d("lhj", "After timeStr : $timeStr")
 
@@ -103,6 +110,13 @@ class MyScheduleActivity : AppCompatActivity() {
 
     private fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this@MyScheduleActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 
 }

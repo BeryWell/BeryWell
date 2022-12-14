@@ -73,6 +73,7 @@
             android:background="#f1f1f5"
             android:paddingVertical="16dp"
             android:paddingHorizontal="12dp"
+            android:inputType="textPassword"
             android:textSize="14dp"
             android:textColor="#999999"
             android:letterSpacing="-0.02"

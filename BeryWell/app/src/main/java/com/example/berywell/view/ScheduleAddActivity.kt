@@ -146,4 +146,11 @@ class ScheduleAddActivity : AppCompatActivity() {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this@ScheduleAddActivity, MyScheduleActivity::class.java)
+        startActivity(intent)
+    }
+
 }

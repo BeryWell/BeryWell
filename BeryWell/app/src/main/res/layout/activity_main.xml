@@ -63,28 +63,62 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.27"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/main_tb">
+                app:layout_constraintTop_toBottomOf="@id/main_tb"
+                app:layout_constraintBottom_toTopOf="@+id/main_btns_cl">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="추후 수정"
-                    android:textColor="@color/black"
-                    android:textSize="10dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.1"
-                    app:layout_constraintWidth_percent="0.1" />
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/main_banner_vp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <ImageView
+                    android:id="@+id/main_banner_iv"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.836"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintDimensionRatio="1:0.512"
+                    android:src="@drawable/icon_banner"
+                    android:alpha="0.6"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/banner_title_tv"/>
+
+                <TextView
+                    android:id="@+id/banner_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.1"
+                    android:text="인플루언서"
+                    android:fontFamily="@font/gmr"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginStart="38dp"
+                    android:textColor="#191919"
+                    android:letterSpacing="-0.03"
+                    android:lineSpacingExtra="10sp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/banner_subtitle_tv"/>
+
+                <TextView
+                    android:id="@+id/banner_subtitle_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintHeight_percent="0.1"
+                    android:text="유명인사들의 스케쥴표를 확인하세요"
+                    android:fontFamily="@font/gmlight"
+                    android:autoSizeMaxTextSize="14sp"
+                    android:layout_marginStart="38dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeMinTextSize="1sp"
+                    android:textColor="#191919"
+                    android:lineSpacingExtra="66sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -290,8 +324,8 @@
                     android:textColor="#222222"
                     android:letterSpacing="-0.03"
                     android:lineSpacingExtra="12sp"
-                    android:fontFamily="@font/gmbold"
-                    android:text="추천 스케쥴"
+                    android:fontFamily="@font/gmr"
+                    android:text="타인 스케쥴"
                     android:gravity="center_vertical"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"/>
@@ -329,6 +363,7 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="30dp"
                 android:paddingStart="24dp"
+                android:layout_marginBottom="50dp"
                 app:layout_constraintDimensionRatio="1:0.51"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -348,8 +383,8 @@
                     android:textColor="#222222"
                     android:letterSpacing="-0.03"
                     android:lineSpacingExtra="12sp"
-                    android:fontFamily="@font/gmbold"
-                    android:text="추천 스케쥴"
+                    android:fontFamily="@font/gmr"
+                    android:text="타인 스케쥴"
                     android:gravity="center_vertical"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"/>
@@ -368,17 +403,17 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/friend_rv"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/activity_seleb_schedule_item"
+                    android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/main_rm_schdule_second_title_tv" />
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

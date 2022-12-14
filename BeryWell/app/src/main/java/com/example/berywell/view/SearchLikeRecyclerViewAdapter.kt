@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.berywell.R
+import com.example.berywell.model.SearchLikeModel
 
 class SearchLikeRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -15,6 +16,9 @@ class SearchLikeRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHold
         return SearchLikeEventViewHolder(LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_search_like_item, parent, false))
     }
+
+
+
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         searLikeList?.let { SearchLikeEvent ->

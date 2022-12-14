@@ -49,14 +49,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_like_tb">
 
-            <Button
-                android:id="@+id/btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="btn"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/my_user_profile_ol_cl"
                 android:layout_width="0dp"
@@ -72,14 +64,13 @@
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintWidth_percent="0.334">
 
-                <androidx.appcompat.widget.AppCompatImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/my_user_profile_iv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="1dp"
                     android:layout_marginVertical="1dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/community_owner_temp_img"
+                    android:src="@drawable/do1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -118,18 +109,18 @@
 
             <TextView
                 android:id="@+id/search_user_name_tv"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="13dp"
                 android:autoSizeMaxTextSize="22dp"
                 android:autoSizeMinTextSize="1dp"
                 android:autoSizeStepGranularity="1dp"
                 android:autoSizeTextType="uniform"
-                android:fontFamily="@font/gmbold"
+                android:fontFamily="@font/gmr"
                 android:gravity="center_horizontal|center_vertical"
                 android:letterSpacing="-0.03"
                 android:lineSpacingExtra="8sp"
-                android:text="예지"
+                android:text="도널트 트럼프"
                 android:textColor="#191919"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.05"
@@ -139,7 +130,7 @@
 
             <TextView
                 android:id="@+id/search_user_info_tv"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="2dp"
                 android:autoSizeMaxTextSize="12dp"
@@ -149,7 +140,7 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:letterSpacing="-0.02"
                 android:lineSpacingExtra="18sp"
-                android:text="연예인"
+                android:text="미합중국 제45대 대통령"
                 android:textColor="#191919"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.027"
@@ -179,7 +170,7 @@
                     android:letterSpacing="-0.02"
                     android:lineSpacingExtra="18sp"
                     android:scrollbars="vertical"
-                    android:text="@string/user_info_tx"
+                    android:text="@string/do_do"
                     android:textColor="#191919"
                     android:textSize="12dp"
                     app:layout_constraintBottom_toBottomOf="parent"

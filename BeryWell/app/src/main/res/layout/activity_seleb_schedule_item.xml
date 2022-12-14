@@ -16,15 +16,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <ImageView
-            android:id="@+id/recommend_seleb_schedule_iv"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_user_profile_ol_cl"
             android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.8"
             android:layout_height="0dp"
-            android:background="@color/black"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/user_profile_outline_drawable"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.917" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/seleb_name_tv">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/celeb_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="0.5dp"
+                android:layout_marginVertical="0.5dp"
+                android:src="@drawable/community_owner_temp_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <TextView
@@ -40,10 +57,11 @@
             android:letterSpacing="-0.02"
             android:lineSpacingExtra="18sp"
             android:text="손석희"
+            android:gravity="center_horizontal|center_vertical"
             android:textColor="#222222"
             app:layout_constraintHeight_percent="0.107"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recommend_seleb_schedule_iv" />
+            app:layout_constraintTop_toBottomOf="@+id/my_user_profile_ol_cl" />
 
         <TextView
             android:id="@+id/seleb_job_tv"
@@ -57,6 +75,7 @@
             android:letterSpacing="-0.03"
             android:lineSpacingExtra="20sp"
             android:text="JTBC 뉴스룸 메인 랭커"
+            android:gravity="center_vertical|center_horizontal"
             android:textColor="#999999"
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="parent"
